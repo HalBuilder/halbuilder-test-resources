@@ -10,6 +10,68 @@
     <name>halbuilder-test-resources</name>
     <url>http://maven.apache.org</url>
 
+    <scm>
+        <connection>scm:git@github.com:HalBuilder/halbuilder-test-resources.git</connection>
+        <developerConnection>scm:git@github.com:HalBuilder/halbuilder-test-resources.git</developerConnection>
+        <url>http://github.com/HalBuilder/halbuilder-test-resources</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>talios</id>
+            <name>Mark Derricutt</name>
+            <email>mark@talios.com</email>
+            <url>http://www.talios.com</url>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>Apache License</name>
+        </license>
+    </licenses>
+
+    <distributionManagement>
+        <repository>
+            <id>sonatype-staging</id>
+            <name>oss.sonatype.org Staging Repository</name>
+            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+        <snapshotRepository>
+            <id>github-snapshots</id>
+            <name>oss.sonatype.org github Release Repository Snapshot Repository</name>
+            <url>http://oss.sonatype.org/content/repositories/github-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <profiles>
+        <profile>
+            <id>release</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -30,6 +92,17 @@
                     <includes>
                         <include>**/*</include>
                     </includes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <preparationGoals>clean install</preparationGoals>
+                    <goals>deploy</goals>
+                    <pushChanges>false</pushChanges>
+                    <localCheckout>true</localCheckout>
+                    <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
                 </configuration>
             </plugin>
         </plugins>
