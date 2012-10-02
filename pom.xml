@@ -11,8 +11,8 @@
     <url>http://maven.apache.org</url>
 
     <scm>
-        <connection>scm:git@github.com:HalBuilder/halbuilder-test-resources.git</connection>
-        <developerConnection>scm:git@github.com:HalBuilder/halbuilder-test-resources.git</developerConnection>
+        <connection>scm:git:git@github.com:HalBuilder/halbuilder-test-resources.git</connection>
+        <developerConnection>scm:git:git@github.com:HalBuilder/halbuilder-test-resources.git</developerConnection>
         <url>http://github.com/HalBuilder/halbuilder-test-resources</url>
     </scm>
 
