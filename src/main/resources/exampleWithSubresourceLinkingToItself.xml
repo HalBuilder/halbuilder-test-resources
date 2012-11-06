@@ -2,7 +2,7 @@
   <link rel="ns:parent" href="https://example.com/api/customer/1234" name="bob" title="The Parent" hreflang="en" />
   <link rel="ns:users" href="https://example.com/api/customer/123456?users" />
   <resource href="https://example.com/user/11" rel="ns:user">
-    <link rel="role:admin self" href="https://example.com/user/11" />
+    <link rel="role:admin" href="https://example.com/user/11" />
     <age>32</age>
     <expired>false</expired>
     <id>11</id>

@@ -23,7 +23,10 @@
   "_embedded" : {
     "ns:user" : {
       "_links" : {
-        "role:admin self" : {
+        "self" : {
+          "href" : "https://example.com/user/11"
+        },
+        "role:admin" : {
           "href" : "https://example.com/user/11"
         }
       },
