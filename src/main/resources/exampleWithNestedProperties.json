@@ -1,0 +1,14 @@
+{
+    "name" : "Example Resource",
+    "nested": [
+        {
+            "key": 1,
+            "value": "one"
+        },
+        {
+            "key": 2,
+            "value": "two"
+        }
+    ]
+
+}
