@@ -1,4 +1,4 @@
 {
-  "array" : [ "one" ],
+  "array" : "one",
   "name" : "Example Resource"
 }
