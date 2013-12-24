@@ -3,7 +3,7 @@
 
     <groupId>com.theoryinpractise</groupId>
     <artifactId>halbuilder-test-resources</artifactId>
-    <version>3.0.3</version>
+    <version>3.0.4-SNAPSHOT</version>
     <packaging>jar</packaging>
     <description>Reusable test representations for the HAL XML/JSON REST format.</description>
 
@@ -14,7 +14,7 @@
         <connection>scm:git:git@github.com:HalBuilder/halbuilder-test-resources.git</connection>
         <developerConnection>scm:git:git@github.com:HalBuilder/halbuilder-test-resources.git</developerConnection>
         <url>http://github.com/HalBuilder/halbuilder-test-resources</url>
-      <tag>halbuilder-test-resources-3.0.3</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <developers>
