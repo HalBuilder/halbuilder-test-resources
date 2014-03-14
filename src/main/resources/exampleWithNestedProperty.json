@@ -1,0 +1,12 @@
+{
+  "_links" : {
+    "self" : {
+      "href" : "https://example.com/api/customer/123456"
+    }
+  },
+  "nested" : {
+    "text": "abc",
+    "num" : 1,
+    "bool": true
+  }
+}
