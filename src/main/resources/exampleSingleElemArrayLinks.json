@@ -8,12 +8,12 @@
     "self" : {
       "href" : "https://example.com/api/customer/123456"
     },
-    "ns:parent" : [ {
+    "ns:parent" : {
       "href" : "https://example.com/api/customer/1234",
       "name" : "bob",
       "title" : "The Parent",
       "hreflang" : "en"
-    } ],
+    },
     "ns:users" : [ {
       "href" : "https://example.com/api/customer/123456?users"
     } ]
