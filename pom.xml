@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -5,17 +6,15 @@
     <artifactId>halbuilder-test-resources</artifactId>
     <version>4.1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <description>Reusable test representations for the HAL XML/JSON REST format.</description>
 
     <name>halbuilder-test-resources</name>
+    <description>Reusable test representations for the HAL XML/JSON REST format.</description>
     <url>http://maven.apache.org</url>
-
-    <scm>
-        <connection>scm:git:git@github.com:HalBuilder/halbuilder-test-resources.git</connection>
-        <developerConnection>scm:git:git@github.com:HalBuilder/halbuilder-test-resources.git</developerConnection>
-        <url>http://github.com/HalBuilder/halbuilder-test-resources</url>
-      <tag>HEAD</tag>
-  </scm>
+    <licenses>
+        <license>
+            <name>Apache License</name>
+        </license>
+    </licenses>
 
     <developers>
         <developer>
@@ -26,12 +25,12 @@
         </developer>
     </developers>
 
-    <licenses>
-        <license>
-            <name>Apache License</name>
-        </license>
-    </licenses>
-
+    <scm>
+        <connection>scm:git:git@github.com:HalBuilder/halbuilder-test-resources.git</connection>
+        <developerConnection>scm:git:git@github.com:HalBuilder/halbuilder-test-resources.git</developerConnection>
+        <url>http://github.com/HalBuilder/halbuilder-test-resources</url>
+      <tag>HEAD</tag>
+  </scm>
     <distributionManagement>
         <repository>
             <id>sonatype-staging</id>
@@ -44,34 +43,6 @@
             <url>http://oss.sonatype.org/content/repositories/github-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
-    <profiles>
-        <profile>
-            <id>release</id>
-            <activation>
-                <property>
-                    <name>performRelease</name>
-                    <value>true</value>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -127,4 +98,32 @@
         </plugins>
     </build>
 
+    <profiles>
+        <profile>
+            <id>release</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
