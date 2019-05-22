@@ -31,12 +31,12 @@
     <repository>
       <id>sonatype-staging</id>
       <name>oss.sonatype.org Staging Repository</name>
-      <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
     <snapshotRepository>
       <id>github-snapshots</id>
       <name>oss.sonatype.org github Release Repository Snapshot Repository</name>
-      <url>http://oss.sonatype.org/content/repositories/github-snapshots/</url>
+      <url>https://oss.sonatype.org/content/repositories/github-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
   <properties>
@@ -51,7 +51,7 @@
         <extensions>true</extensions>
         <configuration>
           <tiles>
-            <tile>com.theoryinpractise:halbuilder-styleguide-tile:[1.0.18, 2)</tile>
+            <tile>com.theoryinpractise:halbuilder-styleguide-tile:[1.0.19]</tile>
           </tiles>
         </configuration>
       </plugin>
@@ -73,14 +73,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
-        <version>2.4.1</version>
-        <dependencies>
-          <dependency>
-            <groupId>org.apache.maven.scm</groupId>
-            <artifactId>maven-scm-provider-gitexe</artifactId>
-            <version>1.8.1</version>
-          </dependency>
-        </dependencies>
+        <version>2.5.3</version>
         <configuration>
           <preparationGoals>clean install</preparationGoals>
           <goals>deploy</goals>
